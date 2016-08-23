@@ -70,7 +70,7 @@
 				<!-- Player Selector -->
 				<div class="col-xs-12 col-md-8">
 					<div class="panel panel-default">
-				 		<div class="panel-body">
+				 		<div id="card-field" class="panel-body">
 				 			<div class="col-xs-4 col-md-3">
 				 				<img id="" class="" src="">
 					  		</div> 
@@ -131,8 +131,14 @@
 	for (i=0; i < (totalCards/2) ; i++) {
 		cardValues.push(i);
 	}
+console.log(cardValues);
+	
+	for (i=0; i < cardValues.length; i++) {
+		$('#card-field').append('<div class="card" value="' + i + '">' + cardValues[i] + '</div>');
+		$('#card-field').append('<div class="card" value="' + i + '">' + cardValues[i] + '</div>');
 
-	console.log(cardValues);
+	}
+	
 		
 
 $(document).ready(function(){
