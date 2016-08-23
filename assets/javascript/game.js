@@ -4,7 +4,46 @@ var secondPick;
 var wins = 0;
 var losses = 0;
 var guesses = 5;
+var totalCards = 20;
+var cardValues = [];
+
+function shuffle(array) {
+	var currentIndex = array.length, temporaryValue, randomIndex;
+
+  	// While there remain elements to shuffle...
+  	while (0 !== currentIndex) {
+
+	    // Pick a remaining element...
+	    randomIndex = Math.floor(Math.random() * currentIndex);
+	    currentIndex -= 1;
+
+	    // And swap it with the current element.
+	    temporaryValue = array[currentIndex];
+	    array[currentIndex] = array[randomIndex];
+	    array[randomIndex] = temporaryValue;
+	}
+
+  	return array;
+}
+
+for (i=0; i < (totalCards/2) ; i++) {
+	cardValues.push(i);
+	cardValues.push(i);
+}
+
+console.log(cardValues);
+shuffle(cardValues);
+console.log(cardValues);
+
+
+
+for (i=0; i < cardValues.length; i++) {
+	$('#card-field').append('<div class="card panel-body col-xs-3 text-center alert alert-danger" data-value="' + cardValues[i] + '">' + cardValues[i] + '</div>');
+}
+	
+
 $('#guesses-remaining').html(guesses);
+
 $('.card').on('click', function(event) {
 	// alert("clicked");
 	if (pickFirstNumber == true) {
