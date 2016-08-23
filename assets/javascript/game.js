@@ -4,8 +4,7 @@ var secondPick;
 var wins = 0;
 var losses = 0;
 var guesses = 5;
-
-
+$('#guesses-remaining').html(guesses);
 $('.card').on('click', function(event) {
 	// alert("clicked");
 	if (pickFirstNumber == true) {
@@ -27,11 +26,14 @@ function isMatched() {
 	if (firstPick == secondPick) {
 		$('#msg-box').html("You Win!");
 		wins++;
+		$('#wins').html(wins);
 	} else {
 		guesses--;
+		$('#guesses-remaining').html(guesses);
 		if (guesses == 0) {
 			$('#msg-box').html("You lose!");
 			losses++;
+			$('#losses').html(losses);
 		}
 	}
 	firstPick = "";
