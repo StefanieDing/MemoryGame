@@ -33,6 +33,9 @@ function isMatched() {
 			losses++;
 		}
 	}
+	}
+	firstPick = "";
+	secondPick = "";
 }
 
 
