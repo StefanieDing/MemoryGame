@@ -17,6 +17,11 @@ $('.card').on('click', function(event) {
 	}
 });
 
+
+$('#new-game').on('click', function(event) {
+	newGame();
+});
+
 function isMatched() {
 	if (firstPick == secondPick) {
 		$('#msg-box').html("You Win!");
@@ -28,6 +33,9 @@ function isMatched() {
 			losses++;
 		}
 	}
+	}
+	firstPick = "";
+	secondPick = "";
 }
 
 
