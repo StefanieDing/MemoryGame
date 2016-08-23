@@ -1,5 +1,5 @@
 var pickFirstNumber = true;
-var firstpick;
+var firstPick;
 var secondPick;
 var wins = 0;
 var losses = 0;
@@ -7,16 +7,17 @@ var guesses = 5;
 
 
 $('.card').on('click', function(event) {
-	alert("clicked");
+	// alert("clicked");
 	if (pickFirstNumber == true) {
-		fistPick = this.value;
+		firstPick = $(this).attr('data-value');
+		console.log("firstPick is " + firstPick);
+		$('#msg-box').html("You selected " + firstPick);
 		pickFirstNumber = false;
 	} else if (pickFirstNumber == false) {
-		secondPick = this.value;
+		secondPick = $(this).attr('data-value');
 		isMatched();
 	}
 });
-
 
 $('#new-game').on('click', function(event) {
 	newGame();
@@ -33,9 +34,9 @@ function isMatched() {
 			losses++;
 		}
 	}
-	}
 	firstPick = "";
 	secondPick = "";
 }
+
 
 
