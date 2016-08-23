@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Combat RPG</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" href="assets/css/style.css">	
+ 	</head>
+ 	<body>
+		
+		<!-- Container -->
+		<div class="container-fluid">
+			
+			<!-- Header -->
+			<div class="page-header text-center">
+    			<h1>Memory Game</h1>
+  			</div>
+			
+			<!-- MSG Box -->
+			<div class="row">
+				<div class="col-xs-12">
+					<div class="panel-group">
+						<div class="panel panel-default">
+					 		<div class="panel-body">
+					 			<h4 id="msg-box" class="text-center">#msg-box</h4>
+						  	</div>
+						</div>
+					</div>
+				</div>
+			</div> 	<!-- MSG Box -->
+
+
+			<div class="row">
+
+				<!-- Show Player Stats -->
+				<div class="col-xs-12 col-md-4">
+					<div class="panel panel-default">
+				 		<div class="panel-body">
+				 			<div class="col-xs-6 col-md-12">
+
+				 				<div class="col-xs-12">
+									<h5>Guesses Remaining</h5>
+								</div>
+				 				<div class="col-xs-12">
+									<div id="guesses-remaining" class="text-center">#guesses-remaining</div>
+								</div>
+				 				<div class="col-xs-12">
+									<h5>Wins</h5>
+								</div>
+								<div class="col-xs-12">
+									<div id="wins" class="text-center">#wins</div>
+								</div>
+				 				<div class="col-xs-12">
+									<h5>Losses</h5>
+								</div>
+								<div class="col-xs-12">
+									<div id="losses" class="text-center">#losses</div>
+								</div>
+				 				<button id="new-game" class="btn btn-success btn-block">New Game</button>
+				 			</div>
+
+					  	</div>
+					</div>
+				</div>
+	
+
+				<!-- Player Selector -->
+				<div class="col-xs-12 col-md-8">
+					<div class="panel panel-default">
+				 		<div class="panel-body">
+				 			<div class="col-xs-4 col-md-3">
+				 				<img id="" class="" src="">
+					  		</div> 
+					  		<div class="col-xs-4 col-md-3">
+				 				<img  id="" class="" src="">
+					  		</div>
+					  		<div id="mark" class="col-xs-4 col-md-3">
+				 				<img  id="" class="" src="">
+					  		</div>
+					  		<div class="col-xs-4 col-md-3">
+				 				<img  id="" class="" src="">
+					  		</div>
+					  		<div class="col-xs-4 col-md-3">
+				 				<img  id="" class="" src="">
+					  		</div>
+					  		<div class="col-xs-4 col-md-3">
+				 				<img  id="" class="" src="">
+					  		</div>
+					  		<div class="col-xs-4 col-md-3">
+				 				<img  id="" class="" src="">
+					  		</div>
+					  		<div class="col-xs-4 col-md-3">
+				 				<img  id="" class="" src="">
+					  		</div>
+					  		<div class="col-xs-4 col-md-3">
+				 				<img  id="" class="" src="">
+					  		</div>
+					  		<div class="col-xs-4 col-md-3">
+				 				<img  id="" class="" src="">
+					  		</div>
+					  		<div class="col-xs-4 col-md-3">
+				 				<img  id="" class="" src="">
+					  		</div>
+					  		<div class="col-xs-4 col-md-3">
+				 				<img  id="" class="" src="">
+					  		</div>
+					  	</div>
+					</div>
+				</div>
+
+
+
+			</div> <!-- Row -->
+
+		</div>	<!-- Container -->
+
+<script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+
+<script type="text/javascript">
+
+
+	var totalCards = 20;
+	var cardValues = [];
+
+	for (i=0; i < (totalCards/2) ; i++) {
+		cardValues.push(i);
+	}
+
+	console.log(cardValues);
+		
+
+$(document).ready(function(){
+
+
+
+})
+
+
+
+</script>
+
+		<!-- Footer -->	
+		<footer class="footer">
+		    <div class="container">
+		   		<p class="text-muted text-center">&copy; Copyright 2016 Mark Q Schwanda</p>
+			</div>
+		</footer>
+
+	</body>
+</html>
+
