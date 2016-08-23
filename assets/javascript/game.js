@@ -35,13 +35,10 @@ console.log(cardValues);
 shuffle(cardValues);
 console.log(cardValues);
 
-
-
 for (i=0; i < cardValues.length; i++) {
 	$('#card-field').append('<div class="card panel-body col-xs-3 text-center alert alert-danger" data-value="' + cardValues[i] + '">' + cardValues[i] + '</div>');
 }
 	
-
 $('#guesses-remaining').html(guesses);
 
 $('.card').on('click', function(event) {
@@ -53,7 +50,11 @@ $('.card').on('click', function(event) {
 		pickFirstNumber = false;
 	} else if (pickFirstNumber == false) {
 		secondPick = $(this).attr('data-value');
+		$('#msg-box').html("You selected " + secondPick);
 		isMatched();
+		setTimeout(function(){
+			$('#msg-box').html("");
+		},2000); 
 	}
 });
 
